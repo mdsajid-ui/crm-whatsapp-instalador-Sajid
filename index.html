@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Instalador guiado para montar tu propio CRM de WhatsApp con la API oficial de Meta.">
+  <title>CRM de WhatsApp — Instalador</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07130f; --card:#10231b; --line:#244438; --text:#f0f8f4; --muted:#a9c2b8; --green:#25d366; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif; background:radial-gradient(circle at 85% 5%,#164b34 0,transparent 34%),var(--bg); color:var(--text); }
+    main { width:min(960px,calc(100% - 32px)); margin:auto; padding:72px 0; }
+    .eyebrow { color:var(--green); font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:.8rem; }
+    h1 { max-width:780px; margin:.4rem 0 1rem; font-size:clamp(2.5rem,7vw,5.3rem); line-height:1.02; letter-spacing:-.05em; }
+    .lead { max-width:680px; color:var(--muted); font-size:clamp(1.05rem,2vw,1.3rem); }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin:30px 0 54px; }
+    a { color:inherit; }
+    .button { display:inline-block; padding:12px 18px; border-radius:11px; border:1px solid var(--line); text-decoration:none; font-weight:750; }
+    .primary { background:var(--green); border-color:var(--green); color:#03250f; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { padding:24px; border:1px solid var(--line); border-radius:18px; background:color-mix(in srgb,var(--card) 90%,transparent); }
+    .card span { color:var(--green); font-weight:850; }
+    .card h2 { margin:.3rem 0; font-size:1.18rem; }
+    .card p { margin:0; color:var(--muted); }
+    .command { margin-top:30px; padding:20px 24px; border:1px solid var(--line); border-radius:16px; background:#06100c; overflow:auto; }
+    code { color:#b7ffd1; white-space:nowrap; }
+    footer { margin-top:44px; color:var(--muted); font-size:.9rem; }
+    @media (max-width:700px) { main{padding:48px 0}.grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Open source · API oficial de Meta</div>
+    <h1>Tu CRM de WhatsApp, sin 41 pasos manuales.</h1>
+    <p class="lead">Un instalador guiado para crear una bandeja compartida, embudo de ventas, campañas, automatizaciones y asistente de IA en tu propio servidor.</p>
+    <div class="actions">
+      <a class="button primary" href="https://github.com/mdsajid-ui/crm-whatsapp-instalador-Sajid">Ver instalación en GitHub</a>
+      <a class="button" href="https://github.com/ArnasDon/wacrm">Conocer wacrm</a>
+    </div>
+    <section class="grid" aria-label="Proceso de instalación">
+      <article class="card"><span>01</span><h2>Prepará el equipo</h2><p>Instalá Node.js 20+, Git y Docker en el servidor que alojará el CRM.</p></article>
+      <article class="card"><span>02</span><h2>Conectá tus cuentas</h2><p>Ingresá las credenciales de Supabase y de la API oficial de Meta.</p></article>
+      <article class="card"><span>03</span><h2>Ejecutá el instalador</h2><p>El asistente crea la base de datos, configura el webhook y comprueba la instalación.</p></article>
+    </section>
+    <div class="command"><code>git clone https://github.com/mdsajid-ui/crm-whatsapp-instalador-Sajid.git &amp;&amp; cd crm-whatsapp-instalador-Sajid &amp;&amp; npm run instalar</code></div>
+    <footer>El instalador se ejecuta localmente o en un VPS. No ingreses credenciales de Meta o Supabase en este sitio.</footer>
+  </main>
+</body>
+</html>

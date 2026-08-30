@@ -1,0 +1,25 @@
+# ─── SECRETOS ─── nunca, jamás, bajo ningún concepto
+credenciales.env
+credenciales.env.bak
+# Puntero a las credenciales guardadas afuera del repo. No es secreto, pero
+# revela rutas de la máquina de cada uno: es de cada instalación.
+credenciales.ruta
+*.env.local
+.env
+.env.*
+!credenciales.env.example
+
+# El CRM está vendorizado en este repo (no se clona en instalación).
+# Sus propias dependencias/artefactos de build sí se ignoran:
+/crm/node_modules/
+/crm/.next/
+/crm/.vercel/
+
+# Estado local del instalador (no tiene secretos, pero es de cada máquina)
+.instalador.json
+
+node_modules/
+*.log
+tunel.log
+.DS_Store
+Thumbs.db
