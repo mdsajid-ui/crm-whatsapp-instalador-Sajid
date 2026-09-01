@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { kv } from "@vercel/kv";
 
 const JOBS_KEY = "reminder_jobs";
