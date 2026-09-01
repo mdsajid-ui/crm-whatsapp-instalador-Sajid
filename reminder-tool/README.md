@@ -34,8 +34,13 @@ name (e.g. `payment_reminder`) is what you type into this tool.
    - `WHATSAPP_TOKEN` — from Meta Business Manager > WhatsApp > API Setup
    - `WHATSAPP_PHONE_NUMBER_ID` — same page
    - `CRON_SECRET` — any random string you make up (e.g. `openssl rand -hex 16`)
-5. Deploy. The scheduled-sends cron runs automatically every 5 minutes
-   (`vercel.json`), checking for any due reminders and sending them.
+5. Deploy. The scheduled-sends cron runs automatically once a day at
+   3:00 AM UTC / 8:30 AM IST (`vercel.json`), checking for any due
+   reminders and sending them. This is a Vercel Hobby (free) plan limit —
+   cron jobs on Hobby can only run once per day, so a reminder you
+   schedule for, say, 2 PM will actually go out the next time the daily
+   job runs, not at 2 PM exactly. Upgrading to Vercel Pro unlocks
+   finer-grained cron schedules if you need exact-time sends.
 
 ## Using it
 
