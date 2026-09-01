@@ -226,6 +226,13 @@ a mano.
 
 ---
 
+## Herramienta extra: recordatorios de pago por WhatsApp
+
+Este repo también incluye [`reminder-tool/`](./reminder-tool/README.md) — una
+app separada donde subís un CSV de estudiantes y mandás o programás
+recordatorios de pago por WhatsApp usando tu propia app de Meta. No depende
+de `crm/` ni de Supabase; se despliega como su propio proyecto de Vercel.
+
 ## Documentación
 
 | | |
